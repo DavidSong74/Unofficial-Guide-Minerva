@@ -13,6 +13,7 @@ Video: https://drive.google.com/file/d/18h6b-cFwWyfqnMBD_9Q1cav0cw9wkCL9/view?us
 
 ## Domain
 Scrape information from Cross-cohort chat in Minerva telegram; keep it connected in real time
+
 **Insider survival knowledge for Minerva University students** — the practical, lived
 side of being a student who rotates through seven global cities: which professors grade
 how and which courses are worth taking, immigration paths (F-1/OPT, O-1/O-1B visas),
