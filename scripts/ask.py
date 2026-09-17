@@ -39,7 +39,7 @@ import groq
 
 from build_index import DEFAULT_DB, search
 
-MODEL = "llama-3.3-70b-versatile"
+MODEL = "openai/gpt-oss-120b"
 TOP_K = 6             # chunks fed to the LLM after reranking (widened from 5)
 TEMPERATURE = 0.2
 
