@@ -14,6 +14,7 @@ env/
 
 # ChromaDB local storage
 chroma/
+chroma_db/
 
 # Node / web frontend
 web/node_modules/
