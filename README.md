@@ -3,6 +3,8 @@
 ## DEMO Image/Video: 
 Image: ![alt text](image.png)
 Video: https://drive.google.com/file/d/18h6b-cFwWyfqnMBD_9Q1cav0cw9wkCL9/view?usp=sharing
+Image: ![alt text](image2.png)
+Example prompt: "Is there anything we have to do to activate the second year loan? Or did we do that already when we signed up for first year?"
 
 <video controls src="Screen Recording 2026-06-07 at 10.mp4" title="Title"></video>
 
@@ -348,3 +350,30 @@ full export revealed 28 real `topic_created` topics, so ingestion used those ins
   cap (pre-split long messages; bound the carried overlap), keeping chunks inside MiniLM's
   256-token window. Caught only because I required inspecting the chunk distribution before
   embedding, not after.
+
+---
+
+## Running & Restarting Locally
+
+To host or restart the application locally, run both the backend and frontend in separate terminals:
+
+### 1. Backend API (FastAPI)
+From the project root:
+```bash
+.venv/bin/python -m uvicorn api:app --port 8000
+```
+Runs the RAG pipeline backend at `http://127.0.0.1:8000`.
+
+### 2. Frontend Web Interface (Vite + React)
+From the `web/` directory:
+```bash
+cd web
+npm run dev
+```
+Serves the web UI at `http://localhost:5173/` (which automatically proxies `/ask` queries to `:8000`).
+
+### Stopping the Services
+To stop both local background processes running on ports `8000` and `5173`:
+```bash
+kill $(lsof -t -i:8000 -i:5173)
+```
